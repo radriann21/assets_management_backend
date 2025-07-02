@@ -8,3 +8,8 @@ app.use(cors({
   methods: ["GET", "POST", "PUT", "DELETE"],
 }))
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Assets Backend API")
+})
+
+export default app

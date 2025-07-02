@@ -2,9 +2,11 @@
   "name": "assets-backend",
   "version": "1.0.0",
   "description": "a basic backend for managing assets using Node.js, Express, and Sequelize with PostgreSQL",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "backend",

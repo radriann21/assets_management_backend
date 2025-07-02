@@ -3,6 +3,17 @@ import db from "./models/index.js";
 
 const PORT = process.env.SERVER_PORT || 3001;
 
-app.get("/", (req, res) => {
-  res.send("Welcome to the Asset Management API");
-});
+db.sequelize.authenticate()
+  .then(() => {
+    console.log("Database connection established successfully.");
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error("Unable to connect to the database:", err);
+    process.exit(1);
+  });
+
+
+

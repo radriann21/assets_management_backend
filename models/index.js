@@ -11,12 +11,12 @@ const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.p
 })
 
 const db = {}
-db.Sequelize = Sequelize
-db: sequelize = sequelize
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
 
 import DepartamentoModel from "./Departamentos.js";
 import EmpleadoModel from "./Empleados.js";
-import ActivoModel from "./Activos.js";
+import ActivoModel from "./Activo.js";
 import AsignacionesModel from "./Asignaciones.js";
 
 db.Departamento = DepartamentoModel(sequelize, DataTypes);
